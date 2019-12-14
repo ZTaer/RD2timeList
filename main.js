@@ -71,12 +71,6 @@
       role: 'Role+event'
     };
     var qsValues = {
-      'entry.1897203079': eventType[key],
-      'entry.1753454597': timezone,
-      'entry.1235834234': event.timeString,
-      'entry.1278810820': event.utcTimeString,
-      'entry.698549775': event.name,
-      'entry.988863521': String(id)
     };
     var queryString = Object.keys(qsValues)
       .map(function(qsKey) {
@@ -84,11 +78,11 @@
       })
       .join('&');
     var url =
-      'https://docs.google.com/forms/d/e/1FAIpQLSeaEdri09zJXnLksx4icLAY70tWGGDqyuPvaQZQMnc4R9R9ag/viewform?usp=pp_url&' +
+      'https://map.sosee.org/' +
       queryString;
     anchor.setAttribute('href', url);
     anchor.className = 'form-link';
-    anchor.innerText = 'Submit correction';
+    anchor.innerText = '问题反馈';
     return anchor;
   }
 
