@@ -42,9 +42,6 @@
       var li = document.createElement('li');
       if (event.eta > 0 && event.eta < frequency) {
         li.classList.add('next-event');
-        el.nextEventName.innerHTML = event.name;
-        el.nextEventTime.innerHTML = event.timeString;
-        el.nextEventEta.innerHTML = event.etaText;
       }
       li.append(getAnchor(key.toLowerCase() + id));
       var text = document.createElement('span');
